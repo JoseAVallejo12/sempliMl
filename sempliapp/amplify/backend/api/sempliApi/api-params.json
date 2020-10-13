@@ -1,0 +1,90 @@
+{
+    "paths": [
+        {
+            "name": "/user/random",
+            "lambdaFunction": "userRandom",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/user/random"
+        },
+        {
+            "name": "/user/cluster",
+            "lambdaFunction": "userCluster",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/user/db/read",
+            "lambdaFunction": "userReadDb",
+            "privacy": {
+                "open": true
+            }
+        },
+        {
+            "name": "/user/db/write/{user}",
+            "lambdaFunction": "userWriteDb",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "sempliApi",
+    "apiName": "sempliApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "userRandom"
+        },
+        {
+            "lambdaFunction": "userCluster"
+        },
+        {
+            "lambdaFunction": "userReadDb"
+        },
+        {
+            "lambdaFunction": "userWriteDb"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-sempliapp-dev-183801-authRole",
+        "unAuthRoleName": "amplify-sempliapp-dev-183801-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "userRandom",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "userCluster",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "userReadDb",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "userWriteDb",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ],
+    "uuid": "43aee987"
+}
