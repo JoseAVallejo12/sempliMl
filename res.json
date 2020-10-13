@@ -1,0 +1,176 @@
+{
+  "usedata": [
+    {
+      "alertas": {
+        "S": "No"
+      },
+      "sector": {
+        "S": "Servicios"
+      },
+      "estrato_min": {
+        "N": "5"
+      },
+      "empleados": {
+        "N": "118"
+      },
+      "state": {
+        "S": "PAID"
+      },
+      "monto_acum": {
+        "N": "741247449"
+      },
+      "instagram": {
+        "S": "Si"
+      },
+      "ubicacion": {
+        "S": "Santa Marta"
+      },
+      "mujeres_empr": {
+        "S": "No"
+      },
+      "huellas": {
+        "N": "11"
+      },
+      "acceso_banca": {
+        "S": "Si"
+      },
+      "id": {
+        "S": "22ffc83a-0d72-11eb-8d8c-b068e62a582f"
+      },
+      "activador": {
+        "S": "CreditProfessionalContact"
+      },
+      "linkedin_empresarios": {
+        "S": "No"
+      },
+      "numero_acc": {
+        "N": "48"
+      },
+      "website": {
+        "S": "No"
+      },
+      "arrears_days": {
+        "N": "208"
+      },
+      "ingresos": {
+        "S": "Growth"
+      },
+      "mujeres_cargos": {
+        "N": "13"
+      },
+      "uso_recursos": {
+        "S": "SP"
+      },
+      "plazo": {
+        "S": "25 a 36 meses"
+      },
+      "edad_empr": {
+        "N": "34"
+      },
+      "recency": {
+        "N": "190"
+      },
+      "impacto": {
+        "S": "No"
+      },
+      "score_bureau": {
+        "N": "109"
+      },
+      "linkedin_empresa": {
+        "S": "No"
+      },
+      "procesos_jud": {
+        "S": "No"
+      },
+      "total_paid": {
+        "N": "180739925"
+      }
+    },
+    {
+      "alertas": {
+        "S": "No"
+      },
+      "sector": {
+        "S": "Servicios"
+      },
+      "estrato_min": {
+        "N": "2"
+      },
+      "empleados": {
+        "N": "19"
+      },
+      "state": {
+        "S": "LATE"
+      },
+      "monto_acum": {
+        "N": "1076910815"
+      },
+      "instagram": {
+        "S": "Si"
+      },
+      "ubicacion": {
+        "S": "Bello"
+      },
+      "mujeres_empr": {
+        "S": "No"
+      },
+      "huellas": {
+        "N": "5"
+      },
+      "acceso_banca": {
+        "S": "No"
+      },
+      "id": {
+        "S": "a93e07f0-0d71-11eb-8d8c-b068e62a582f"
+      },
+      "activador": {
+        "S": "Other"
+      },
+      "linkedin_empresarios": {
+        "S": "No"
+      },
+      "numero_acc": {
+        "N": "40"
+      },
+      "website": {
+        "S": "No"
+      },
+      "arrears_days": {
+        "N": "165"
+      },
+      "ingresos": {
+        "S": "Seed"
+      },
+      "mujeres_cargos": {
+        "N": "17"
+      },
+      "uso_recursos": {
+        "S": "KT - CO"
+      },
+      "plazo": {
+        "S": "M\u00e1s de 37 meses"
+      },
+      "edad_empr": {
+        "N": "71"
+      },
+      "recency": {
+        "N": "276"
+      },
+      "impacto": {
+        "S": "Si"
+      },
+      "score_bureau": {
+        "N": "450"
+      },
+      "linkedin_empresa": {
+        "S": "Si"
+      },
+      "procesos_jud": {
+        "S": "Si"
+      },
+      "total_paid": {
+        "N": "24151615"
+      }
+    }
+  ]
+}

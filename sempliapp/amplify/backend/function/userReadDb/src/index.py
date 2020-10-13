@@ -1,6 +1,16 @@
+import json
+import boto3
+
+#def handler(event, context):
+
 def handler(event, context):
-  print('received event:')
-  print(event)
-  return {
-    'message': 'Hello from your new Amplify Python lambda!'
-  }
+    client = boto3.client('dynamodb')
+    items = client.scan(
+        TableName='customer02-dev'
+    )
+    return {
+        "statusCode": 200,
+        "body": json.dumps({
+            "usedata": items["Items"]
+        })
+    }

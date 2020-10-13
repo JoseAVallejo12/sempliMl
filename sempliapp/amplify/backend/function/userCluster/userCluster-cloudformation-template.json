@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-sempliapp-dev-183801-deployment",
-          "S3Key": "amplify-builds/userCluster-626446666f7475534c6b-build.zip"
+          "S3Key": "amplify-builds/userCluster-6d39784b416b76354357-build.zip"
         }
       }
     },

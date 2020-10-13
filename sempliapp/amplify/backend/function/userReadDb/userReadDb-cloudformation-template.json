@@ -9,6 +9,14 @@
     },
     "env": {
       "Type": "String"
+    },
+    "storagecustomer02Name": {
+      "Type": "String",
+      "Default": "storagecustomer02Name"
+    },
+    "storagecustomer02Arn": {
+      "Type": "String",
+      "Default": "storagecustomer02Arn"
     }
   },
   "Conditions": {
@@ -55,6 +63,12 @@
             },
             "REGION": {
               "Ref": "AWS::Region"
+            },
+            "STORAGE_CUSTOMER02_NAME": {
+              "Ref": "storagecustomer02Name"
+            },
+            "STORAGE_CUSTOMER02_ARN": {
+              "Ref": "storagecustomer02Arn"
             }
           }
         },
@@ -69,7 +83,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-sempliapp-dev-183801-deployment",
-          "S3Key": "amplify-builds/userReadDb-58784f626a4852426864-build.zip"
+          "S3Key": "amplify-builds/userReadDb-666454704c4a4a2f6b46-build.zip"
         }
       }
     },
@@ -150,6 +164,56 @@
                   }
                 ]
               }
+            }
+          ]
+        }
+      }
+    },
+    "AmplifyResourcesPolicy": {
+      "DependsOn": [
+        "LambdaExecutionRole"
+      ],
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": "amplify-lambda-execution-policy",
+        "Roles": [
+          {
+            "Ref": "LambdaExecutionRole"
+          }
+        ],
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:GetItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:PutItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:UpdateItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:BatchGetItem",
+                "dynamodb:DescribeTable",
+                "dynamodb:ConditionCheckItem"
+              ],
+              "Resource": [
+                {
+                  "Ref": "storagecustomer02Arn"
+                },
+                {
+                  "Fn::Join": [
+                    "/",
+                    [
+                      {
+                        "Ref": "storagecustomer02Arn"
+                      },
+                      "index/*"
+                    ]
+                  ]
+                }
+              ]
             }
           ]
         }

@@ -9,6 +9,14 @@
     },
     "env": {
       "Type": "String"
+    },
+    "storagecustomer02Name": {
+      "Type": "String",
+      "Default": "storagecustomer02Name"
+    },
+    "storagecustomer02Arn": {
+      "Type": "String",
+      "Default": "storagecustomer02Arn"
     }
   },
   "Conditions": {
@@ -55,6 +63,12 @@
             },
             "REGION": {
               "Ref": "AWS::Region"
+            },
+            "STORAGE_CUSTOMER02_NAME": {
+              "Ref": "storagecustomer02Name"
+            },
+            "STORAGE_CUSTOMER02_ARN": {
+              "Ref": "storagecustomer02Arn"
             }
           }
         },
@@ -69,7 +83,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-sempliapp-dev-183801-deployment",
-          "S3Key": "amplify-builds/userWriteDb-77534177746652537362-build.zip"
+          "S3Key": "amplify-builds/userWriteDb-7a694b30416b436b5445-build.zip"
         }
       }
     },
@@ -150,6 +164,51 @@
                   }
                 ]
               }
+            }
+          ]
+        }
+      }
+    },
+    "AmplifyResourcesPolicy": {
+      "DependsOn": [
+        "LambdaExecutionRole"
+      ],
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": "amplify-lambda-execution-policy",
+        "Roles": [
+          {
+            "Ref": "LambdaExecutionRole"
+          }
+        ],
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:Put*",
+                "dynamodb:Create*",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:Update*",
+                "dynamodb:RestoreTable*"
+              ],
+              "Resource": [
+                {
+                  "Ref": "storagecustomer02Arn"
+                },
+                {
+                  "Fn::Join": [
+                    "/",
+                    [
+                      {
+                        "Ref": "storagecustomer02Arn"
+                      },
+                      "index/*"
+                    ]
+                  ]
+                }
+              ]
             }
           ]
         }
